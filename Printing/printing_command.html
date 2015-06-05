@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://www.eecs.utk.edu/resources/it/kb/printing/linux-command-line -->
+<html class="no-js" lang="en"><!--<![endif]--><!-- http://communications.utk.edu/resources/web/requirements.php --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8">
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+<title>EECS :: Command-Line Printing in Linux</title>
+<meta name="description" content="">
+<meta name="generator" content="concrete5 - 5.6.3.2">
+<script type="text/javascript">
+var CCM_DISPATCHER_FILENAME = '/index.php';
+var CCM_CID = 318;
+var CCM_EDIT_MODE = false;
+var CCM_ARRANGE_MODE = false;
+var CCM_IMAGE_PATH = "/updates/concrete5.6.3.2/concrete/images";
+var CCM_TOOLS_PATH = "/index.php/tools/required";
+var CCM_BASE_URL = "http://www.eecs.utk.edu";
+var CCM_REL = "";
+
+</script>
+
+	<link rel="shortcut icon" href="http://www.eecs.utk.edu/files/7814/2800/4441/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://www.eecs.utk.edu/files/7814/2800/4441/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./EECS    Command-Line Printing in Linux_files/ccm.base.css">
+<script type="text/javascript" src="./EECS    Command-Line Printing in Linux_files/jquery.js"></script>
+<script type="text/javascript" src="./EECS    Command-Line Printing in Linux_files/ccm.base.js"></script>
+<script type="text/javascript" src="./EECS    Command-Line Printing in Linux_files/email_deobfuscator_html.js"></script>
+<!--[if lt IE 9]><script src="/themes/utk_2012_vertical/js/html5-shiv.js"></script><![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]><script src="/themes/utk_2012_vertical/js/selectivizr-min.js"></script><![endif]-->
+<link rel="canonical" href="./EECS    Command-Line Printing in Linux_files/EECS    Command-Line Printing in Linux.html">
+<script type="text/javascript" src="./EECS    Command-Line Printing in Linux_files/marginfix.js"></script>
+<link rel="stylesheet" href="http://www.eecs.utk.edu/themes/utk_2012_vertical/css/global.css">
+<link rel="stylesheet" href="http://www.eecs.utk.edu/themes/utk_2012_vertical/css/font.css">
+<!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two">-->
+<!--[if lt IE 8]><link rel="stylesheet" href="/themes/utk_2012_vertical/css/ie7.css"><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" href="/themes/utk_2012_vertical/css/oldbrowsers.css"><![endif]-->
+</head>
+<body>
+<header id="masthead">
+  <div class="container">
+    <div class="wordmark columns">
+      <h1 class="logo"><a href="http://www.utk.edu/" target="_blank">The University of Tennessee, Knoxville</a></h1>
+    </div>
+    <div id="tools" class="tools columns">
+      <ul id="toolbox">
+        <li id="n1"><a>CALENDARS</a>
+          <ul>
+            <li><a href="http://www.utk.edu/events/events/" target="_blank">UT EVENT CALENDAR</a></li>
+            <li><a href="http://registrar.tennessee.edu/academic_calendar/" target="_blank">ACADEMIC CALENDAR</a></li>
+            <li><a href="http://registrar.tennessee.edu/academic_calendar/" target="_blank">ACADEMIC TIMETABLE</a></li>
+            <li><a href="http://registrar.tennessee.edu/academic_calendar/" target="_blank">KEY DATES</a></li>
+          </ul>
+        </li>
+        <li id="n2"><a href="http://www.utk.edu/maps" target="_blank">MAPS</a>
+          <!--<ul>
+            <li><a href="http://www.eecs.utk.edu/about/facilities/map-and-directory">MIN KAO BUILDING MAP</a></li>
+            <li><a href="http://www.utk.edu/maps/" target="_blank">CAMPUS INTERACTIVE</a></li>
+            <li><a href="http://www.utk.edu/maps/archive/" target="_blank">PDF VERSIONS</a></li>
+          </ul>-->
+        </li>
+        <li id="n3"><a>A-Z</a> 
+          <ul>
+            <li><a href="http://www.utk.edu/alpha/#A-E" target="_blank">A-E</a></li>
+            <li><a href="http://www.utk.edu/alpha/#F-J" target="_blank">F-J</a></li>
+            <li><a href="http://www.utk.edu/alpha/#K-O" target="_blank">K-O</a></li>
+            <li><a href="http://www.utk.edu/alpha/#P-T" target="_blank">P-T</a></li>
+            <li><a href="http://www.utk.edu/alpha/#U-Z" target="_blank">U-Z</a></li>
+          </ul>
+        </li>
+        <li id="n4"><a>PEOPLE FINDER</a>
+            <ul>
+                <!--<li><a href="http://www.eecs.utk.edu/about/facilities/map-and-directory">MIN KAO DIRECTORY</a></li>-->
+                <!--<li><a href="/people/faculty/">EECS FACULTY DIRECTORY</a></li>-->
+                <!--<li><a href="/people/staff/">EECS STAFF DIRECTORY</a></li>-->
+                <!--<li><a href="/people/students/">EECS STUDENT DIRECTORY</a></li>-->
+                <li><a href="http://directory.utk.edu/" target="_blank">CAMPUS DIRECTORY</a></li>
+                <li><a href="http://chancellor.utk.edu/" target="_blank">CHANCELLOR</a></li>
+                <li><a href="http://provost.utk.edu/" target="_blank">PROVOST</a></li>
+                <li><a href="http://chancellor.utk.edu/about/cabinet/" target="_blank">VICE CHANCELLORS</a></li>
+                <li><a href="http://provost.utk.edu/about/reporting-offices/academic-deans/" target="_blank">ACADEMIC DEANS</a></li>
+            </ul>
+        </li>
+        <li id="n5"><a>E-MAIL</a>
+          <ul>
+                <!--<li><a href="https://webmail.eecs.utk.edu/">EECS WEBMAIL</a></li>-->
+                <li><a href="https://tmail.utk.edu/" target="_blank">TMAIL</a></li>
+                <li><a href="http://office365.utk.edu/" target="_blank">VOLMAIL (FACULTY &amp; STAFF)</a></li>
+                <li><a href="http://volmail.utk.edu/" target="_blank">VOLMAIL (STUDENTS)</a></li>
+                <li><a href="http://listserv.utk.edu/" target="_blank">UT LISTSERV</a></li>
+                <li><a href="https://oit.utk.edu/accounts/email/Pages/" target="_blank">ABOUT UT EMAIL</a></li>
+          </ul>
+        </li>
+        <li id="n6"><a>LOGINS</a>
+          <ul>
+               <!-- <li><a href="https://www.eecs.utk.edu/utk_login?rcID=%2Fresources%2Fit%2Fkb%2Fprinting%2Flinux-command-line">EECS WEBSITE</a></li>-->
+                <li><a href="http://myutk.utk.edu/" target="_blank">MYUTK</a></li>
+                <li><a href="http://online.utk.edu/" target="_blank">ONLINE@UT</a></li>
+                <li><a href="http://iris.tennessee.edu/" target="_blank">IRIS</a></li>
+                <li><a href="https://oit.utk.edu/accounts/unix-volspace/Pages/default.aspx" target="_blank">UT WEB ACCOUNTS</a></li>
+                <li><a href="https://oit.utk.edu/accounts/passwords/Pages/default.aspx" target="_blank">UT PASSWORDS</a></li>
+          </ul>
+        </li>
+        <li id="n7"><a>LIBRARIES</a>
+          <ul>
+                <li><a href="http://www.lib.utk.edu/" target="_blank">UNIVERSITY LIBRARIES</a></li>
+                <li><a href="http://www.lib.utk.edu/agvet/" target="_blank">AGRICULTURE &amp; VET MED</a></li>
+                <li><a href="http://www.law.utk.edu/library/" target="_blank">LAW</a></li>
+                <li><a href="http://gsm.utmck.edu/library/" target="_blank">MEDICAL</a></li>
+                <li><a href="http://www.lib.utk.edu/music/" target="_blank">MUSIC</a></li>
+                <li><a href="http://www.lib.utk.edu/swn/" target="_blank">SOCIAL WORK</a></li>
+                <li><a href="http://www.utsi.edu/library/" target="_blank">SPACE INSTITUTE</a></li>
+                <li><a href="http://www.lib.utk.edu/spcoll/" target="_blank">SPECIAL COLLECTIONS</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="sitewidesearch search">
+        <div class="headerHolder" style="width: 100%; height: 25px;">
+        <form action="http://www.eecs.utk.edu/index.php/search/" method="get" class="ccm-search-block-form" speech="" x-webkit-speech="">
+          <input name="search_paths[]" type="hidden" value="">
+          <div class="searchInput" style="width:75%; float: left;">
+            <label for="query" style="display:none;visibility:hidden;">Search</label>
+            <input name="query" type="text" value="" class="sitewidesearch searchfield ccm-search-block-text" style="width: 95%;">
+          </div>
+          <div class="submitButton" style="width:25%; float: right;">
+            <input name="submit" type="submit" value="Search" class="sitewidesearch searchsubmit ccm-search-block-submit">
+          </div>
+        </form>
+        </div>
+      </div>
+      <!--<div class="sitewidesearch search">
+        <form action="/index.php/search/" method="get" class="ccm-search-block-form" speech x-webkit-speech>
+          <input name="search_paths[]" type="hidden" value="">
+          <label for="query" style="display:none;visibility:hidden;">Search</label>
+          <input name="query" type="text" value="" class="sitewidesearch searchfield ccm-search-block-text">
+          <input name="submit" type="submit" value="Search" class="sitewidesearch searchsubmit ccm-search-block-submit">
+        </form>
+      </div>-->
+    </div>
+    <div id="userauth"><a href="https://www.eecs.utk.edu/login?rcID=%2Fresources%2Fit%2Fkb%2Fprinting%2Flinux-command-line">Sign In</a></div>
+  </div>
+</header>
+
+<div class="container content">
+
+  <h1 class="office">
+    <a href="http://www.eecs.utk.edu/">
+      <img src="./EECS    Command-Line Printing in Linux_files/dept-header.gif" alt="Department of Electrical Engineering and Computer Science" height="120" width="960" class="desktop">
+      <img src="./EECS    Command-Line Printing in Linux_files/dept-header-mobile.gif" alt="Department of Electrical Engineering and Computer Science" height="120" width="600" class="mobile" style="visibility:hidden;display:none;">
+    </a>
+  </h1>
+  <br class="clear">
+  <nav id="menu" role="navigation" class="mainmenu">
+    <ul id="nav1-h" class="navigation nav-header"><li class="nav-path-selected"><a class="nav-path-selected" href="http://www.eecs.utk.edu/">Home</a></li><li><a class="placeholder">About EECS</a><ul><li><a href="http://www.eecs.utk.edu/about/welcome/">Welcome</a></li><li><a href="http://www.eecs.utk.edu/about/contact/">Contact Information</a></li><li><a href="http://www.eecs.utk.edu/about/facilities/">Facilities</a></li><li><a href="http://www.eecs.utk.edu/about/history/">History</a></li><li><a href="http://www.eecs.utk.edu/about/visitor-information/">Visitor Information</a></li><li><a href="http://www.eecs.utk.edu/about/data/">Enrollment Data</a></li></ul></li><li><a class="placeholder">Academics</a><ul><li><a href="http://www.eecs.utk.edu/academics/undergraduate/">Undergraduate Programs</a></li><li><a href="http://www.eecs.utk.edu/academics/graduate/">Graduate Programs</a></li><li><a href="http://www.eecs.utk.edu/academics/advising/">Advising</a></li><li><a href="http://www.eecs.utk.edu/academics/course-catalog/">Course Catalog</a></li><li><a href="https://bannerssb.utk.edu/kbanpr/bwckschd.p_disp_dyn_sched" target="_blank">Schedule of Classes/Timetable</a></li></ul></li><li><a class="placeholder">Research</a><ul><li><a href="http://www.eecs.utk.edu/research/areas/">Areas of Research</a></li><li><a href="https://www.eecs.utk.edu/resources/library/">Technical Reports</a></li><li><a href="http://cisml.utk.edu/" target="_blank">CISML</a></li><li><a href="http://curent.utk.edu/" target="_blank">CURENT</a></li><li><a href="http://www.icl.utk.edu/" target="_blank">ICL</a></li><li><a href="http://www.nimbios.org/" target="_blank">NIMBioS</a></li></ul></li><li><a class="placeholder">People</a><ul><li><a href="http://www.eecs.utk.edu/people/faculty/">Faculty Directory</a></li><li><a href="http://www.eecs.utk.edu/people/office/">Business Office</a></li><li><a href="http://www.eecs.utk.edu/people/it/">IT Staff</a></li><li><a href="http://www.eecs.utk.edu/people/parts/">Parts Store</a></li><li><a href="http://www.eecs.utk.edu/people/researchstaff/">Research Staff</a></li><li><a href="http://www.eecs.utk.edu/people/industrial-advisory-board/">Industrial Advisory Board</a></li><li><a href="http://www.eecs.utk.edu/people/student-organizations/">Student Organizations</a></li></ul></li><li><a href="http://www.eecs.utk.edu/news/">News</a></li><li><a class="placeholder">Resources</a><ul><li><a href="http://www.eecs.utk.edu/resources/facilities-help/">Facility Services</a></li><li class="nav-path-selected"><a class="nav-path-selected" href="http://www.eecs.utk.edu/resources/it/">IT Support</a></li><li><a href="http://www.eecs.utk.edu/resources/mechanical-shop/">Mechanical Shop</a></li><li><a href="http://www.eecs.utk.edu/resources/store/">Parts Store</a></li><li><a href="http://www.eecs.utk.edu/resources/ship/">Shipping/Receiving</a></li><li><a href="http://www.eecs.utk.edu/resources/purchasing/">Purchasing</a></li><li><a href="http://www.eecs.utk.edu/resources/employment/">Employment Opportunities</a></li><li><a href="http://www.eecs.utk.edu/resources/portal/">Department Portal</a></li><li><a href="http://www.eecs.utk.edu/sitemap">Site Map</a></li></ul></li></ul>  </nav>
+  <nav id="conditionalmenu"><ul class="navigation" id="mm1"><li><a href="http://www.eecs.utk.edu/resources/it/" style="padding-left:16px;font-weight:bold;">IT Support:</a></li><li class="nav-path-selected"><a class="nav-path-selected" href="http://www.eecs.utk.edu/resources/it/kb/">IT Knowledge Base</a></li><li><a href="http://www.eecs.utk.edu/resources/it/computing/">Research/Lab Resources</a></li><li><a href="http://www.eecs.utk.edu/resources/it/facilities-statement/">Facilities Statement</a></li></ul></nav>  <br class="clear">
+<div id="breadcrumbs" style="position:relative;margin:0 7px;top:-25px;"><a href="http://www.eecs.utk.edu/" target="_self">Home</a> <span class="ccm-autonav-breadcrumb-sep">&gt;</span> <a href="http://www.eecs.utk.edu/resources/" target="_self">Resources</a> <span class="ccm-autonav-breadcrumb-sep">&gt;</span> <a href="http://www.eecs.utk.edu/resources/it/" target="_self">IT Support</a> <span class="ccm-autonav-breadcrumb-sep">&gt;</span> <a href="http://www.eecs.utk.edu/resources/it/kb/" target="_self">IT Knowledge Base</a> <span class="ccm-autonav-breadcrumb-sep">&gt;</span> <a href="http://www.eecs.utk.edu/resources/it/kb/printing/" target="_self">Printing</a> <span class="ccm-autonav-breadcrumb-sep">&gt;</span> Command-Line Printing in Linux</div>
+	<div class="full column clear">
+	<h1>Command-Line Printing in Linux</h1>
+<p>CUPS provides both the System V (lp(1)) and Berkeley (lpr(1)) printing commands for printing files. In addition, it supported a large number of standard and printer-specific options that allow you to control how and where files are printed.</p>
+<p>This guide is taken from the Common Unix Printing System (CUPS) documentation. It is available on any system running CUPS (e.g. EECS Ubuntu Linux Desktops) at&nbsp;<a href="http://localhost:631/help/options.html" target="_blank">http://localhost:631/help/options.html</a>. &nbsp;You can also find CUPS documentation at <a href="http://www.cups.org/" target="_blank">www.cups.org</a>.</p>
+<h2><a id="printing-files" name="printing-files"></a>Printing Files</h2>
+<p>CUPS understands many different types of files directly, including text, PostScript,&nbsp;<acronym title="Portable Document Format">PDF</acronym>, and image files. This allows you to print from inside your applications or at the command-line, whichever is most convenient! Type either of the following commands to print a file to the default (or only) printer on the system:</p>
+<code style="padding-left: 30px;">lp filename</code> <code style="padding-left: 30px;">lpr filename</code>
+<h3><a id="choosing-a-printer" name="choosing-a-printer"></a>Choosing a Printer</h3>
+<p>Many systems will have more than one printer available to the user. These printers can be attached to the local system via a parallel, serial, or USB port, or available over the network. Use the <strong>lpstat(1)</strong> command to see a list of available printers:</p>
+<code style="padding-left: 30px;">lpstat -p -d</code>
+<p>The&nbsp;option specifies that you want to see a list of printers, and the <code class="inline">-d</code>&nbsp;option reports the current default printer or class.</p>
+<p>Use the <code class="inline">-d</code>&nbsp;option with the&nbsp;<strong>lp</strong>&nbsp;command to print to a specific printer:</p>
+<code style="padding-left: 30px;">lp -d printer filename</code>
+<p>or the <code class="inline">-P</code> option with the&nbsp;<strong>lpr</strong>&nbsp;command:</p>
+<code style="padding-left: 30px;">lpr -P printer filename</code>
+<h3><a id="setting-the-default-printer" name="setting-the-default-printer"></a>Setting the Default Printer</h3>
+<p>If you normally use a particular printer, you can tell CUPS to use it by default using the <strong>lpoptions(1)</strong> command:</p>
+<code class="code" style="padding-left: 30px;">lpoptions -d printer</code>
+<h3><a id="printing-the-output-of-a-program" name="printing-the-output-of-a-program"></a>Printing the Output of a Program</h3>
+<p>Both the&nbsp;<strong>lp</strong>&nbsp;and&nbsp;<strong>lpr</strong>&nbsp;commands support printing from the standard input:</p>
+<code class="code" style="padding-left: 30px;">program | lp</code> <code class="code" style="padding-left: 30px;">program | lp -d printer</code> <code class="code" style="padding-left: 30px;">program | lpr</code> <code class="code" style="padding-left: 30px;">program | lpr -P printer</code>
+<p>If the program does not provide any output, then nothing will be queued for printing.</p>
+<h3><a id="specifying-printer-options" name="specifying-printer-options"></a>Specifying Printer Options</h3>
+<p>For many types of files, the default printer options may be sufficient for your needs. However, there may be times when you need to change the options for a particular file you are printing.</p>
+<p>The&nbsp;<strong>lp</strong>&nbsp;and&nbsp;<strong>lpr</strong>&nbsp;commands allow you to pass printer options using the <code class="inline">-o</code> option:</p>
+<code class="code" style="padding-left: 30px;">lp -o landscape -o scaling=75 -o media=A4 filename.jpg</code> <code class="code" style="padding-left: 30px;">lpr -o landscape -o scaling=75 -o media=A4 filename.jpg</code>
+<p>The available printer options vary depending on the printer. The standard options are described in the <a class="wikilink1" title="printing:linux ↵" href="http://www.eecs.utk.edu/resources/it/kb/printing/linux-command-line#options">Standard Printing Options</a>&nbsp;section below. Printer-specific options are also available and can be listed using the&nbsp;<strong>lpoptions</strong>&nbsp;command:</p>
+<code class="code" style="padding-left: 30px;">lpoptions -p printer -l</code>
+<h3><a id="creating-saved-options" name="creating-saved-options"></a>Creating Saved Options</h3>
+<p>Saved options are supported in CUPS through&nbsp;<em>printer instances</em>. Printer instances are, as their name implies, copies of a printer that have certain options associated with them. Use the&nbsp;<strong>lpoptions</strong>&nbsp;command to create a printer instance:</p>
+<code class="code" style="padding-left: 30px;">lpoptions -p printer/instance -o name=value ...</code>
+<p>The <code class="inline">-p printer/instance</code> option provides the name of the instance, which is always the printer name, a slash, and the instance name which can contain any printable characters except space and slash. The remaining options are then associated with the instance instead of the main queue. For example, the following command creates a duplex instance of the LaserJet queue:</p>
+<code class="code" style="padding-left: 30px;">lpoptions -p LaserJet/duplex -o sides=two-sided-long-edge</code>
+<p>Instances&nbsp;<em>do not</em>&nbsp;inherit lpoptions from the main queue.</p>
+<h3><a id="printing-multiple-copies" name="printing-multiple-copies"></a>Printing Multiple Copies</h3>
+<p>Both the&nbsp;<strong>lp</strong>&nbsp;and&nbsp;<strong>lpr</strong>&nbsp;commands have options for printing more than one copy of a file:</p>
+<code class="code" style="padding-left: 30px;">lp -n <em>num-copies</em> filename</code> <code class="code" style="padding-left: 30px;">lpr -#<em>num-copies</em> filename</code>
+<p>Copies are normally&nbsp;<em>not</em>&nbsp;collated for you. Use the ”-o Collate=True” option to get collated copies:</p>
+<code class="code" style="padding-left: 30px;">lp -n <em>num-copies</em> -o Collate=True filename</code> <code class="code" style="padding-left: 30px;">lpr -#<em>num-copies</em> -o Collate=True filename</code>
+<h2><a id="canceling-a-print-job" name="canceling-a-print-job"></a>Canceling a Print Job</h2>
+<p>The cancel(1) and lprm(1) commands cancel a print job:</p>
+<code class="code" style="padding-left: 30px;">cancel <em>job-id</em></code> <code class="code" style="padding-left: 30px;">lprm <em>job-id</em></code>
+<p>The&nbsp;<em>job-id</em>&nbsp;is the number that was reported to you by the&nbsp;<strong>lp</strong>&nbsp;command. You can also get the job ID using the lpq(1) or lpstat commands:</p>
+<code class="code" style="padding-left: 30px;">lpq</code> <code class="code" style="padding-left: 30px;">lpstat</code>
+<h2><a id="moving-a-print-job" name="moving-a-print-job"></a>Moving a Print Job</h2>
+<p>The lpmove(8) command moves a print job to a new printer or class:</p>
+<code class="code" style="padding-left: 30px;">lpmove <em>job-id</em> <em>destination</em></code>
+<p>The&nbsp;<em>job-id</em>&nbsp;is the number that was reported to you by the&nbsp;<strong>lp</strong>&nbsp;or&nbsp;<strong>lpstat</strong>&nbsp;commands.&nbsp;<em>Destination</em>&nbsp;is the name of a printer or class that you want to actually print the job.</p>
+<p><strong>Note:</strong> The lpmove command is located in the system command directory (typically /usr/sbin or /usr/local/sbin), and so may not be in your command path. Specify the full path to the command if you get a "command not found" error, for example:</p>
+<code style="padding-left: 30px;">/usr/sbin/lpmove foo-123 bar</code>
+<h2><a id="standard-printing-options" name="standard-printing-options"></a>Standard Printing Options</h2>
+<p>The following options apply when printing all types of files.</p>
+<h3><a id="selecting-the-media-size-type-and-source" name="selecting-the-media-size-type-and-source"></a>Selecting the Media Size, Type, and Source</h3>
+<p>The <code class="inline">-o media=xyz</code>&nbsp;option sets the media size, type, and/or source:</p>
+<code class="code" style="padding-left: 30px;">lp -o media=Letter filename</code> <code class="code" style="padding-left: 30px;">lp -o media=Letter,MultiPurpose filename</code> <code class="code" style="padding-left: 30px;">lpr -o media=Letter,Transparency filename</code> <code class="code" style="padding-left: 30px;">lpr -o media=Letter,MultiPurpose,Transparency filename</code>
+<p>The available media sizes, types, and sources depend on the printer, but most support the following options (case is not significant):</p>
+<ul>
+<li>“Letter” - US Letter (8.5×11 inches, or 216x279mm)</li>
+<li>“Legal” - US Legal (8.5×14 inches, or 216x356mm)</li>
+<li>“A4” -&nbsp;<acronym title="International Organization for Standardization">ISO</acronym>&nbsp;A4 (8.27×11.69 inches, or 210x297mm)</li>
+<li>“COM10” - US #10 Envelope (9.5×4.125 inches, or 241x105mm)</li>
+<li>“DL” -&nbsp;<acronym title="International Organization for Standardization">ISO</acronym>&nbsp;DL Envelope (8.66×4.33 inches, or 220x110mm)</li>
+<li>“Transparency” - Transparency media type or source</li>
+<li>“Upper” - Upper paper tray</li>
+<li>“Lower” - Lower paper tray</li>
+<li>“MultiPurpose” - Multi-purpose paper tray</li>
+<li>“LargeCapacity” - Large capacity paper tray</li>
+</ul>
+<p>The actual options supported are defined in the printer's PPD file in the “PageSize”, “InputSlot”, and “MediaType” options. You can list them using the&nbsp;<strong>lpoptions(1)</strong>&nbsp;command:</p>
+<code>lpoptions -p printer -l</code>
+<p>When “Custom” is listed for the “PageSize” option, you can specify custom media sizes using one of the following forms:</p>
+<pre>lp -o media=Custom.<em>WIDTH</em>x<em>LENGTH</em> filename<br>lp -o media=Custom.<em>WIDTH</em>x<em>LENGTH</em>in filename<br>lp -o media=Custom.<em>WIDTH</em>x<em>LENGTH</em>cm filename<br>lp -o media=Custom.<em>WIDTH</em>x<em>LENGTH</em>mm filename</pre>
+<p>where “WIDTH” and “LENGTH” are the width and length of the media in points, inches, centimeters, or millimeters, respectively.</p>
+<h3><a id="setting-the-orientation" name="setting-the-orientation"></a>Setting the Orientation</h3>
+<p>The ”-o landscape” option will rotate the page 90 degrees to print in landscape orientation:</p>
+<pre class="code" style="padding-left: 30px;">lp -o landscape filename
+lpr -o landscape filename</pre>
+<p>The ”-o orientation-requested=N” option rotates the page depending on the value of N:</p>
+<ul>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o orientation-requested=3</span><br>portrait orientation (no rotation)</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o orientation-requested=4</span><br>landscape orientation (90 degrees)</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o orientation-requested=5</span><br>reverse landscape or seascape orientation (270 degrees)</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o orientation-requested=6</span><br>reverse portrait or upside-down orientation (180 degrees)</li>
+</ul>
+<h3><a id="printing-on-both-sides-of-the-paper" name="printing-on-both-sides-of-the-paper"></a>Printing On Both Sides of the Paper</h3>
+<p>The <code class="inline">-o sides=two-sided-short-edge</code> and <code class="inline">-o sides=two-sided-long-edge</code>&nbsp;options will enable two-sided printing on the printer if the printer supports it. The <code class="inline">-o sides=two-sided-short-edge</code> option is suitable for landscape pages, while the <code class="inline">-o sides=two-sided-long-edge</code> option is suitable for portrait pages:</p>
+<pre class="code">lp -o sides=two-sided-short-edge filename
+lp -o sides=two-sided-long-edge filename
+lpr -o sides=two-sided-long-edge filename</pre>
+<p>The default is to print single-sided:</p>
+<pre class="code">lp -o sides=one-sided filename
+lpr -o sides=one-sided filename</pre>
+<h3><a id="selecting-the-banner-page-s" name="selecting-the-banner-page-s"></a>Selecting the Banner Page(s)</h3>
+<p>The <code class="inline">-o jobsheets=start,end</code> option sets the banner page(s) to use for a job:</p>
+<pre class="code">lp -o job-sheets=none filename
+lp -o job-sheets=standard filename
+lpr -o job-sheets=classified,classified filename</pre>
+<p>If only one banner file is specified, it will be printed before the files in the job. If a second banner file is specified, it is printed after the files in the job.</p>
+<p>The available banner pages depend on the local system configuration; CUPS includes the following banner files:</p>
+<ul>
+<li>“none” - Do not produce a banner page.</li>
+<li>“classified” - A banner page with a “classified” label at the top and bottom.</li>
+<li>“confidential” - A banner page with a “confidential” label at the top and bottom.</li>
+<li>“secret” - A banner page with a “secret” label at the top and bottom.</li>
+<li>“standard” - A banner page with no label at the top and bottom.</li>
+<li>“topsecret” - A banner page with a “top secret” label at the top and bottom.</li>
+<li>“unclassified” - A banner page with an “unclassified” label at the top and bottom./li&gt;</li>
+</ul>
+<h3><a id="holding-jobs-for-later-printing" name="holding-jobs-for-later-printing"></a>Holding Jobs for Later Printing</h3>
+<p>The <code class="inline">-o job-hold-until=when</code> option tells CUPS to delay printing until the <code class="inline">when</code> time, which can be one of the following:</p>
+<ul>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=indefinite</span><br>print only after released by the user or an administrator</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=day-time</span><br>print from 6am to 6pm local time</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=night</span><br>print from 6pm to 6am local time</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=second-shift</span><br>print from 4pm to 12am local time</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=third-shift</span><br>print from 12am to 8am local time</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=weekend</span><br>print on Saturday or Sunday</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o job-hold-until=HH:MM</span><br>print at the specified UTC time</li>
+</ul>
+<h3><a id="releasing-held-jobs" name="releasing-held-jobs"></a>Releasing Held Jobs</h3>
+<p>Aside from the web interface, you can use the&nbsp;<strong>lp</strong>&nbsp;command to release a held job:</p>
+<pre class="code">lp -i <em>job-id</em> -H resume</pre>
+<p>where “job-id” is the job ID reported by the&nbsp;<strong>lpstat</strong>&nbsp;command.</p>
+<h3><a id="setting-the-job-priority" name="setting-the-job-priority"></a>Setting the Job Priority</h3>
+<p>The <code class="inline">-o job-priority=NNN</code>&nbsp;option tells CUPS to assign a priority to your job from 1 (lowest) to 100 (highest), which influences where the job appears in the print queue. Higher priority jobs are printed before lower priority jobs, however submitting a new job with a high priority will not interrupt an</p>
+<h3><a id="specifying-the-output-order" name="specifying-the-output-order"></a>Specifying the Output Order</h3>
+<p>The <code class="inline">-o outputorder=normal</code>&nbsp;and <code class="inline">-o outputorder=reverse</code>&nbsp;options specify the order of the pages. Normal order prints page 1 first, page 2 second, and so forth. Reverse order prints page 1 last.</p>
+<h3><a id="selecting-a-range-of-pages" name="selecting-a-range-of-pages"></a>Selecting a Range of Pages</h3>
+<p>The <code class="inline">-o page-ranges=pages</code>&nbsp;option selects a range of pages for printing:</p>
+<pre class="code">lp -o page-ranges=1 filename
+lp -o page-ranges=1-4 filename
+lp -o page-ranges=1-4,7,9-12 filename
+lpr -o page-ranges=1-4,7,9-12 filename</pre>
+<p>As shown above, the “pages” value can be a single page, a range of pages, or a collection of page numbers and ranges separated by commas. The pages will always be printed in ascending order, regardless of the order of the pages in the “page-ranges” option.</p>
+<p>The default is to print all pages.</p>
+<h3><a id="selecting-even-or-odd-pages" name="selecting-even-or-odd-pages"></a>Selecting Even or Odd Pages</h3>
+<p>Use the&nbsp;<code class="inline">-o page-set=set</code>&nbsp;option to select the even or odd pages:</p>
+<pre class="code">lp -o page-set=odd filename
+lp -o page-set=even filename
+lpr -o page-set=even filename</pre>
+<p>The default is to print all pages.</p>
+<h3><a id="n-up-printing" name="n-up-printing"></a>N-Up Printing</h3>
+<p>The <code class="inline">-o number-up=value</code> option selects N-Up printing. N-Up printing places multiple document pages on a single printed page. CUPS supports 1, 2, 4, 6, 9, and 16-Up formats; the default format is 1-Up:</p>
+<pre class="code">lp -o number-up=1 filename
+lp -o number-up=2 filename
+lp -o number-up=4 filename
+lpr -o number-up=16 filename</pre>
+<p>The&nbsp;<code class="inline">-o page-border=value</code>&nbsp;option chooses the border to draw around each page:</p>
+<ul>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o page-border=double</span><br>draw two hairline borders around each page</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o page-border=double-thick</span><br>draw two 1pt borders around each page</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o page-border=none</span><br>do not draw a border (default)</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o page-border=single</span><br>draw one hairline border around each page</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o page-border=single-thick</span><br>draw one 1pt border around each page</li>
+</ul>
+<p>The&nbsp;<code class="inline">-o number-up-layout=value</code>&nbsp;option chooses the layout of the pages on each output page:</p>
+<ul>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=btlr</span><br>Bottom to top, left to right</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=btrl</span><br>Bottom to top, right to left</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=lrbt</span><br>Left to right, bottom to top</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=lrtb</span><br>Left to right, top to bottom (default)</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=rlbt</span><br>Right to left, bottom to top</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=rltb</span><br>Right to left, top to bottom</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=tblr</span><br>Top to bottom, left to right</li>
+<li><span style="font-family: &#39;courier new&#39;, monospace; font-size: 0.875em; line-height: 1.5;">-o number-up-layout=tbrl</span><br>Top to bottom, right to left</li>
+</ul>
+<h3><a id="scaling-to-fit" name="scaling-to-fit"></a>Scaling to Fit</h3>
+<p>The <code class="inline">-o fitplot</code> option specifies that the document should be scaled to fit on the page:</p>
+<pre class="code">lp -o fitplot filename
+lpr -o fitplot filename</pre>
+<p>The default is to use the size specified in the file.</p>
+<p><strong>Note:</strong>This feature depends upon an accurate size in the print file. If no size is given in the file, the page may be scaled incorrectly!</p>
+<h3><a id="printing-in-reverse-order" name="printing-in-reverse-order"></a>Printing in Reverse Order</h3>
+<p>The <code class="inline">-o outputorder=reverse</code> option will print the pages in reverse order:</p>
+<pre class="code">lp -o outputorder=reverse filename
+lpr -o outputorder=reverse filename</pre>
+<p>Similarly, the&nbsp;<code class="inline">-o outputorder=normal</code>&nbsp;option will print starting with page 1:</p>
+<pre class="code">lp -o outputorder=normal filename
+lpr -o outputorder=normal filename</pre>
+<p>The default is&nbsp;<code class="inline">-o outputorder=normal</code>&nbsp;for printers that print face down and <code class="inline">-o outputorder=reverse</code>&nbsp;for printers that print face up.</p>
+<h3><a id="printing-mirrored-pages" name="printing-mirrored-pages"></a>Printing Mirrored Pages</h3>
+<p>The&nbsp;<code class="inline">-o mirror&nbsp;option</code> flips each page along the vertical access to produce a mirrored image:</p>
+<pre class="code">lp -o mirror filename
+lpr -o mirror filename</pre>
+<p>This is typically used when printing on T-shirt transfer media or sometimes on transparencies.</p>
+<h3><a id="raw-or-unfiltered-output" name="raw-or-unfiltered-output"></a>Raw or Unfiltered Output</h3>
+<p>The&nbsp;<code class="inline">-o raw&nbsp;option</code> allows you to send files directly to a printer without filtering. This is sometimes required when printing from applications that provide their own “printer drivers” for your printer:</p>
+<pre class="code">lp -o raw filename
+lpr -o raw filename</pre>
+<p>The&nbsp;<code class="inline">-l</code>&nbsp;option can also be used with the&nbsp;<strong>lpr</strong>&nbsp;command to send files directly to a printer:</p>
+<pre class="code">lpr -l filename</pre>
+<h2><a id="text-options" name="text-options"></a>Text Options</h2>
+<p>CUPS supports several options that are only used when printing plain text files. These options have absolutely no effect on PostScript,&nbsp;<acronym title="Portable Document Format">PDF</acronym>, HP-GL/2, or image files.</p>
+<h3><a id="setting-the-number-of-characters-per-inch" name="setting-the-number-of-characters-per-inch"></a>Setting the Number of Characters Per Inch</h3>
+<p>The&nbsp;<code class="inline">-o cpi=value</code>&nbsp;option sets the number of characters per inch:</p>
+<pre class="code">lp -o cpi=10 filename
+lp -o cpi=12 filename
+lpr -o cpi=17 filename</pre>
+<p>The default characters per inch is 10.</p>
+<h3><a id="setting-the-number-of-lines-per-inch" name="setting-the-number-of-lines-per-inch"></a>Setting the Number of Lines Per Inch</h3>
+<p>The&nbsp;<code class="inline">-o lpi=value</code>&nbsp;option sets the number of lines per inch:</p>
+<pre class="code">lp -o lpi=6 filename
+lpr -o lpi=8 filename</pre>
+<p>The default lines per inch is 6.</p>
+<h3><a id="setting-the-number-of-columns" name="setting-the-number-of-columns"></a>Setting the Number of Columns</h3>
+<p>The&nbsp;<code class="inline">-o columns=value</code>&nbsp;option sets the number of text columns:</p>
+<pre class="code">lp -o columns=2 filename
+lpr -o columns=3 filename</pre>
+<p>The default number of columns is 1.</p>
+<h3><a id="setting-the-page-margins" name="setting-the-page-margins"></a>Setting the Page Margins</h3>
+<p>Normally the page margins are set to the hard limits of the printer. Use the <code class="inline">-o page-left=value</code>, <code class="inline">-o page-right=value</code>, <code class="inline">-o page-top=value</code><span style="font-size: 1em;">, and <code class="inline">-o page-bottom=value</code>&nbsp;options to adjust the page margins:</span></p>
+<pre class="code">lp -o page-left=<em>value</em> <em>filename</em>
+lp -o page-right=<em>value</em> <em>filename</em>
+lp -o page-top=<em>value</em> <em>filename</em>
+lp -o page-bottom=<em>value</em> <em>filename</em>
+lpr -o page-left=<em>value</em> -o page-right=<em>value</em> -o page-top=<em>value</em> -o page-bottom=<em>value</em> <em>filename</em></pre>
+<p>The <code class="inline">value</code>&nbsp;argument is the margin in points; each point is 1/72 inch or 0.35mm.</p>
+<h3><a id="pretty-printing" name="pretty-printing"></a>Pretty Printing</h3>
+<p>The <code class="inline">-o prettyprint</code> option puts a header at the top of each page with the page number, job title (usually the filename), and the date. Also, C and C++ keywords are highlighted, and comment lines are italicized:</p>
+<pre class="code">lp -o prettyprint filename
+lpr -o prettyprint filename</pre>
+<h3><a id="turning-off-text-wrapping" name="turning-off-text-wrapping"></a>Turning Off Text Wrapping</h3>
+<p>The <code class="inline">-o nowrap</code> option disables wrapping of long lines:</p>
+<pre class="code">lp -o nowrap filename
+lpr -o nowrap filename</pre>
+<h2><a id="image-options" name="image-options"></a>Image Options</h2>
+<p>CUPS supports several options that are only used when printing image files. These options have absolutely no effect on PostScript,&nbsp;<acronym title="Portable Document Format">PDF</acronym>, HP-GL/2, or text files.</p>
+<h3><a id="positioning-images" name="positioning-images"></a>Positioning Images</h3>
+<p>The <code class="inline">-o position=name</code> option specifies the position of the image on the page:</p>
+<ul>
+<li>“center” - Center the image on the page (default)</li>
+<li>“top” - Print the image centered at the top of the page</li>
+<li>“left” - Print the image centered on the left of page</li>
+<li>“right” - Print the image centered on the right of the page</li>
+<li>“top-left” - Print the image at the top left corner of the page</li>
+<li>“top-right” - Print the image at the top right corner of the page</li>
+<li>“bottom” - Print the image centered at the bottom of the page</li>
+<li>“bottom-left” - Print the image at the bottom left corner of the page</li>
+<li>“bottom-right” - Print the image at the bottom right corner of the page</li>
+</ul>
+<h3><a id="scaling-images" name="scaling-images"></a>Scaling Images</h3>
+<p>The <code class="inline">-o scaling=percent</code>, <code class="inline">-o ppi=value</code>, and <code class="inline">-o natural-scaling=percent</code> options change the size of a printed image:</p>
+<pre class="code">lp -o scaling=<em>percent</em> <em>filename</em>
+lp -o ppi=<em>value</em> <em>filename</em>
+lpr -o natural-scaling=<em>percent</em> <em>filename</em></pre>
+<p>The <code class="inline">scaling=percent</code> value is a number from 1 to 800 specifying the size in relation to the page (<em>not</em>&nbsp;the image.) A scaling of 100 percent will fill the page as completely as the image aspect ratio allows. A scaling of 200 percent will print on up to 4 pages.</p>
+<p>The <code class="inline">ppi=value</code>&nbsp;value is a number from 1 to 1200 specifying the resolution of the image in pixels per inch. An image that is 3000×2400 pixels will print 10×8 inches at 300 pixels per inch, for example. If the specified resolution makes the image larger than the page, multiple pages will be printed to satisfy the request.</p>
+<p>The <code class="inline">natural-scaling=percent</code> value is a number from 1 to 800 specifying the size in relation to the natural image size. A scaling of 100 percent will print the image at its natural size, while a scaling of 50 percent will print the image at half its natural size. If the specified scaling makes the image larger than the page, multiple pages will be printed to satisfy the request.</p>
+<h3><a id="adjusting-image-hue-tint" name="adjusting-image-hue-tint"></a>Adjusting Image Hue (Tint)</h3>
+<p>The <code class="inline">-o hue=value</code> option will adjust the hue of the printed image, much like the tint control on your television:</p>
+<pre class="code">lp -o hue=<em>value</em> <em>filename</em>
+lpr -o hue=<em>value</em> <em>filename</em></pre>
+<p>The <code class="inline">value</code>&nbsp;argument is a number from -360 to 360 and represents the color hue rotation. The following table summarizes the change you'll see with different colors:</p>
+<table class="inline">
+<tbody>
+<tr class="row0"><th class="col0">Original</th><th class="col1">hue=-45</th><th class="col2">hue=45</th></tr>
+<tr class="row1">
+<td class="col0">Red</td>
+<td class="col1">Purple</td>
+<td class="col2">Yellow-orange</td>
+</tr>
+<tr class="row2">
+<td class="col0">Green</td>
+<td class="col1">Yellow-green</td>
+<td class="col2">Blue-green</td>
+</tr>
+<tr class="row3">
+<td class="col0">Yellow</td>
+<td class="col1">Orange</td>
+<td class="col2">Green-yellow</td>
+</tr>
+<tr class="row4">
+<td class="col0">Blue</td>
+<td class="col1">Sky-blue</td>
+<td class="col2">Purple</td>
+</tr>
+<tr class="row5">
+<td class="col0">Magenta</td>
+<td class="col1">Indigo</td>
+<td class="col2">Crimson</td>
+</tr>
+<tr class="row6">
+<td class="col0">Cyan</td>
+<td class="col1">Blue-green</td>
+<td class="col2">Light-navy-blue</td>
+</tr>
+</tbody>
+</table>
+<p>The default hue adjustment is 0.</p>
+<h3><a id="adjusting-image-saturation-color" name="adjusting-image-saturation-color"></a>Adjusting Image Saturation (Color)</h3>
+<p>The <code class="inline">-o saturation=percent</code> option adjusts the saturation of the colors in an image, much like the color control on your television:</p>
+<pre class="code">lp -o saturation=<em>percent</em> <em>filename</em>
+lpr -o saturation=<em>percent</em> <em>filename</em></pre>
+<p>The “percent” argument specifies the color saturation from 0 to 200. A color saturation of 0 produces a black-and-white print, while a value of 200 will make the colors extremely intense.</p>
+<p>The default saturation is 100.</p>
+<h2><a id="hp-gl2-options" name="hp-gl2-options"></a>HP-GL/2 Options</h2>
+<p>CUPS supports several options that are only used when printing HP-GL/2 files. These options have absolutely no effect on PostScript,&nbsp;<acronym title="Portable Document Format">PDF</acronym>, image, or text files.</p>
+<h3><a id="printing-in-black" name="printing-in-black"></a>Printing in Black</h3>
+<p>The <code class="inline">-o blackplot</code> option specifies that all pens should plot in black:</p>
+<pre class="code">lp -o blackplot filename
+lpr -o blackplot filename</pre>
+<p>The default is to use the colors defined in the plot file or the standard pen colors defined in the HP-GL/2 reference manual from Hewlett Packard.</p>
+<h3><a id="setting-the-default-pen-width" name="setting-the-default-pen-width"></a>Setting the Default Pen Width</h3>
+<p>The <code class="inline">-o penwidth=value</code> option specifies the default pen width for HP-GL/2 files:</p>
+<pre class="code">lp -o penwidth=<em>value</em> <em>filename</em>
+lpr -o penwidth=<em>value</em> <em>filename</em></pre>
+<p>The pen width <code class="inline">value</code> specifies the pen width in micrometers. The default value of 1000 produces lines that are 1 millimeter in width. Specifying a pen width of 0 produces lines that are exactly 1 pixel wide.</p>
+<p><strong>Note:&nbsp;</strong>This option is ignored when the pen widths are set in the plot file.s</p>	</div>
+
+
+<hr>
+
+<ul class="breadcrumbs">
+  <li class="homepage"><a href="http://www.utk.edu/">The University of Tennessee, Knoxville</a></li>
+  <li><a href="http://www.engr.utk.edu/">College of Engineering</a></li>
+    <li><a href="http://www.eecs.utk.edu/">Electrical Engineering and Computer Science</a></li>
+  </ul>
+</div><!-- container -->
+
+<div id="orangebar"> &nbsp;</div>
+
+<footer id="mainfooter">
+  <div class="container">
+    <div class="footer-map">
+      <a href="http://www.utk.edu/maps/"><img src="./EECS    Command-Line Printing in Linux_files/birdseye.png" alt="map"></a>
+    </div>
+    <div id="footernav">
+      <div class="footer-column">
+          
+	<h4>ACADEMICS</h4>
+
+	<ul class="navigation">
+<li><a title="Majors Offered: Electrical Engineering" href="http://www.eecs.utk.edu/academics/undergraduate/">Electrical Engineering</a></li>
+<li><a title="Majors Offered: Computer Engineering" href="http://www.eecs.utk.edu/academics/undergraduate/">Computer Engineering</a></li>
+<li><a title="Majors Offered: Computer Science" href="http://www.eecs.utk.edu/academics/undergraduate/">Computer Science</a></li>
+<li><a title="EECS Computer Science Library" href="http://www.eecs.utk.edu/resources/library" target="_blank">Computer Science Library</a></li>
+</ul>
+
+      </div>
+      <div class="footer-column">
+          
+	<h4>ABOUT THE DEPARTMENT</h4>
+
+	<ul class="navigation">
+<li><a class="obfuscated_link" href="mailto:info@eecs.utk.edu">Ask a general question</a></li>
+<li><a href="http://www.eecs.utk.edu/about-eecs/visitor-information/schedule-a-tour/">Schedule a visit</a></li>
+<li><a title="History" href="http://www.eecs.utk.edu/about/history/">History</a></li>
+<li><a title="Website Feedback" href="http://www.eecs.utk.edu/feedback/">Website feedback</a></li>
+</ul>
+
+      </div>
+      <div class="footer-column" id="contactinfo">
+          
+	<h4>CONTACT INFORMATION</h4>
+
+	<ul class="navigation">
+<li>Min H. Kao Building, Suite 401</li>
+<li>1520 Middle Drive</li>
+<li>Knoxville, TN 37996-2250</li>
+<li>865-974-3461 (phone)</li>
+<li>865-974-5483 (fax)</li>
+<li><a style="margin-top: 8px; font-size: 80%;" href="https://maps.google.com/maps?daddr=1520+Middle+Dr,+Knoxville,+TN&z=19" target="_blank">Get Directions...</a></li>
+</ul>
+
+      </div>
+      <div class="socialsection">
+        <h4>
+        <span id="cadence-notice"><a href="http://www.eecs.utk.edu/cadence">EECS is a participating member of the Cadence University Software Program</a></span>
+        <span id="soc-title">Connect with us:</span>
+        
+<div id="HTMLBlock1017" class="HTMLBlock">
+<a href="https://www.facebook.com/eecs.utk" target="_blank"><img src="./EECS    Command-Line Printing in Linux_files/facebook.png" alt="Facebook" title="Facebook"></a>
+<a href="https://twitter.com/EECS_UTK" target="_blank"><img src="./EECS    Command-Line Printing in Linux_files/twitter.png" alt="Twitter" title="Twitter"></a></div>        </h4>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="indicia">
+<h3><a href="http://www.utk.edu/">The University of Tennessee, Knoxville. Big&nbsp;Orange.&nbsp;Big&nbsp;Ideas.</a></h3>
+
+<p>Knoxville, Tennessee 37996  |  865-974-1000<br>
+The flagship campus of the <a href="http://tennessee.edu/">University of Tennessee System</a></p>
+</div>
+
+<script src="./EECS    Command-Line Printing in Linux_files/combined.js"></script>
+
+
+
+
+</body></html>
