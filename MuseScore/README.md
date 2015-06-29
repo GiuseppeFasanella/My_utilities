@@ -4,11 +4,11 @@
 
 * Scrivi il tuo esempio musicale (piu' sotto c'e' la sintassi di *Musescore* che uso di solito; In questa repo c'e' anche il manuale in pdf di Musescore)
 
-* Salva l'esempio in .mscz
+* Salva l'esempio in .mscz (vedi [prova.mscz] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/MuseScore/prova.mscz))
 
-* Ctrl+p e lo printi in pdf
+* Ctrl+p e lo printi in pdf (vedi [prova.pdf] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/MuseScore/prova.pdf))
 
-* Ritaglia tutto lo spazio bianco del pdf usando `cropper_pdf.sh esempio.` (il `.` non e' essenziale ma usando `TAB` viene scritto al volo e lo script e' pensato in modo che tu non debba cancellare il punto, qualora ci fosse nel nome del file. **NON** scrivere pero' **esempio.pdf**)
+* Ritaglia tutto lo spazio bianco del pdf usando `cropper_pdf.sh esempio.` (il `.` non e' essenziale ma usando `TAB` viene scritto al volo e lo script e' pensato in modo che tu non debba cancellare il punto, qualora ci fosse nel nome del file. **NON** scrivere pero' **esempio.pdf**). Vedi ad esempio come viene [prova-crop.pdf] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/MuseScore/prova-crop.pdf)
 
 * Se hai bisogno di fare modifiche al pdf (tipo commenti, cerchietti) puoi usare `xournal` o `pdfedit` 
 
