@@ -43,3 +43,4 @@ o meglio ancora questo
 * Passo 3: **cambia ancora voce e finisci**
 * Passo 4: Esci dalla modalita' inserimento note; Doppio clic sulla nota raddoppiato e sposta la nota verso destra o sinistra con le frecce della tastiera
 
+Prova ![alt tag](https://github.com/GiuseppeFasanella/My_utilities/blob/master/MuseScore/Esempi/accordo_diminuito-crop.pdf)
