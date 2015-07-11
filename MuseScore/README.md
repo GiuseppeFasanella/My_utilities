@@ -42,3 +42,7 @@ o meglio ancora questo
 
 * Passo 3: **cambia ancora voce e finisci**
 * Passo 4: Esci dalla modalita' inserimento note; Doppio clic sulla nota raddoppiato e sposta la nota verso destra o sinistra con le frecce della tastiera
+
+**Inserire terzine/gruppi irregolari**
+
+![alt tag] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/MuseScore/img/gruppi_irregolari.png)
