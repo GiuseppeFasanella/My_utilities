@@ -2,3 +2,4 @@ Scrivi come indirizzo
 
 data:text/html, <html contenteditable>
 
+<!--The reason this works is that it uses the Data URI scheme to make a simple HTML page with the element, "contenteditable."-->
