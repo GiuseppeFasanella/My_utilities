@@ -1,3 +1,6 @@
+Gimp puo' essere usato in interattivo (batch) come root
+Script-Fu examples
+
 http://www.adp-gmbh.ch/misc/tools/script_fu/ex_12.html
 
 http://www.adp-gmbh.ch/misc/tools/script_fu/index.html#examples
