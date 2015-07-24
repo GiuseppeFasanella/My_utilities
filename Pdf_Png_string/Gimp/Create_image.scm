@@ -19,3 +19,5 @@ ex_01.scm
   )
 )
 c:\> start gimp-2.2.exe -d -i -b  "(ex_01)" "(gimp-quit 0)"
+
+gimp -i -b '(ex_01)' -b '(gimp-quit 0)' Questo funziona molto bene
