@@ -1,3 +1,8 @@
+http://www.adp-gmbh.ch/misc/tools/script_fu/ex_12.html
+
+http://www.adp-gmbh.ch/misc/tools/script_fu/index.html#examples
+
+
 gimp -i -b '(select "foo.png")' -b '(gimp-quit 0)'
 
 Lo script va messo qui
