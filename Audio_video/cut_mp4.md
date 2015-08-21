@@ -15,6 +15,7 @@ ffmpeg -acodec copy -vcodec copy -ss 0 -t 00:05:00 -i coltelleria.mp4 OUTFILE.mp
 coltelleria.mp4 rimarra' inalterato e OUTFILE.mp4 sara' solo i primi 5 minuti del file coltelleria.mp4
 
 **Sia chiaro che funziona anche con gli mp3**
+
 ffmpeg -acodec copy -vcodec copy -ss 00:00:14.99 -t 00:30:00 -i 1.mp3 1_new.mp3
 
 Qui ho tagliato l'orribile musichetta iniziale del "Terzo Anello" che introduce i libri letti "Ad alta voce"
