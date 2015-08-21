@@ -37,7 +37,7 @@ Modifica ssh_config aggiungendo quale cavillo in piu'
 
 * Protocol 2 #usera' il protocollo ssh2 (piu' sicuro)
 * PermitRootLogin no # non potrai loggarti come root 
-* AllowUsers gfasanel # solo gfasanel puo' fare ssh
+* AllowUsers pi # puoi fare ssh solo verso l'utente pi del server
 
 Per rendere operativa le modifiche apportate, **killa e fai ripartire sshd**:
 
