@@ -31,8 +31,20 @@ e prova a connetterti tramite un dispositivo interno alla rete all'interno della
 Se tutto funziona, ti chiedera' la passwd e avrai accesso al server
 
 ### Parte 1.1: Prima di rendere disponibile il server alla rete internet, cura un po' la sicurezza
+Modifica ssh_config aggiungendo quale cavillo in piu'
 
-### Parte 2: Accedere al server tramite un client remoto
+* sudo emacs /etc/ssh/sshd_config
+
+* Protocol 2 #usera' il protocollo ssh2 (piu' sicuro)
+* PermitRootLogin no # non potrai loggarti come root 
+* AllowUsers gfasanel # solo gfasanel puo' fare ssh
+
+Per rendere operativa le modifiche apportate, **killa e fai ripartire sshd**:
+
+* sudo killall sshd
+* sudo /etc/init.d/ssh start
+
+### Parte 2: Accedere al server tramite un client remoto, non presente sullo stesso network del server
 
 
 
