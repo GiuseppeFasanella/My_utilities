@@ -20,14 +20,17 @@ Per rendere operativa la modifica della porta, **killa e fai ripartire sshd**:
 * sudo killall sshd
 * sudo /etc/init.d/ssh start
 
-A questo punto **scopri qual e' il tuo indirizzo inet**:
+A questo punto **scopri qual e' il tuo indirizzo inet** (l'indirizzo del server all'interno della rete domestica):
 * ifconfig | grep inet
 
-e prova a connetterti tramite un dispositivo interno alla rete all'interno della quale si trova il server:
+e prova a connetterti tramite un dispositivo interno alla rete all'interno della quale si trova il server (perche' **all'esterno tutti i dispositivi si affacciano con un solo indirizzo IP** e quindi non puoi connetterti al volo con questa semplice procedura. D'altronde se l'ho chiamata parte 1 c'e' un motivo):
 
 * `ssh -p 3500 gfasanel@192........` (Nota che stai esplicitamente chiedendo di fare ssh tramite la porta 3500)
+* `ssh -p 3500 pi@192.....`
 
 Se tutto funziona, ti chiedera' la passwd e avrai accesso al server
+
+### Parte 1.1: Prima di rendere disponibile il server alla rete internet, cura un po' la sicurezza
 
 ### Parte 2: Accedere al server tramite un client remoto
 
