@@ -46,6 +46,11 @@ Per rendere operativa le modifiche apportate, **killa e fai ripartire sshd**:
 
 ### Parte 2: Accedere al server tramite un client remoto, non presente sullo stesso network del server
 
+**Passo 2.1**: Devi essere sicuro che **il server acquisisca sempre lo stesso inet address** nella rete domestica (quello che ricavi da `ifconfig` per capirci), altrimenti ogni volta che connetterai il server sulla rete domestica,
+questo prendera' un inet diverso (cosi' funziona il protocollo DHCP).
+
+L'esatta procedura e' router-specific 
+
 
 
 
