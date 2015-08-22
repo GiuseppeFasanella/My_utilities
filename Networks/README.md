@@ -64,3 +64,23 @@ L'esatta procedura e' router-specific, ma l'idea e' sempre quella
 * A questo punto devi aggiungere la regola "Questo MAC address 00:13:ef:.... deve sempre prendersi questo inet 192.168.0.4 (ad esempio)"
 
 **Possibile problema**: alcuni router non hanno questa funzione. A quel punto occorre installare un firmware come DD-WRT. Cerca Chadwick Wachs "tutorial for setting up static leases in DD-WRT"
+
+**Passo 2.2**: **Port Forwarding**
+
+Il problema e' sempre lo stesso: tutti i device di una rete interna si affacciano all'esterno con lo stesso IP.
+Questo IP, che io chiamo extern_IP e' quello che puoi trovare chiedendo a `what's my ip.org` (e' l'IP del router).
+Tu devi aggiungere questa regola: "Quando scrivo dall'esterno `ssh -p 3500 pi@extern_IP` in realta' intendo fare ssh al device interno che ha inet: 192.168.... (ecco perche' devi essere sicuro che il device acquisisca sempre lo stesso inet)"
+
+Anche questa procedura e' router-specific
+
+* Accedi ai settings del tuo router sempre con `192.168.0.1`
+* Nel mio caso, sotto *Mode expert* ho trovato **Assigner une regle NAT**. NAT=Network Address Translation 
+* Ricordati di specificare la porta ssh (che non e' piu' quella di default 22, se l'hai cambiato seguendo il passo 1)
+
+**Passo 2.3**: **Castrare l'IP dinamico**
+
+L'ultimo problema e' questo: l'ip del router, quello che prima ho chiamato `extern_IP` e' di solito dinamico, cioe' cambia di quando in quando (tipicamente se tieni spento il modem per una settimana-10 giorni, quando lo riaccendi avrai un IP diverso). 
+
+* Io mi sono fatto un account a `no-ip.org`
+* Ho aggiunto un host, tipo `giuseppe.ddns.net`, che punta all'IP del mio router. Sostanzialmente quindi scrivere `ssh -p 3500 pi@extern_IP` e' equivalente a scrivere `ssh -p 3500 pi@giuseppe.ddns.net`
+* 
