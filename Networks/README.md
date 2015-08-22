@@ -83,4 +83,13 @@ L'ultimo problema e' questo: l'ip del router, quello che prima ho chiamato `exte
 
 * Io mi sono fatto un account a `no-ip.org`
 * Ho aggiunto un host, tipo `giuseppe.ddns.net`, che punta all'IP del mio router. Sostanzialmente quindi scrivere `ssh -p 3500 pi@extern_IP` e' equivalente a scrivere `ssh -p 3500 pi@giuseppe.ddns.net`
-* 
+* L'ultimo tocco e' installare un software sul server che parla a no-ip.org e comunica il nuovo IP a no-ip.org ogni volta che l'IP cambia. Si tratta di un DUC= Dynamic Update Client e in particolare si chiama noip2. Lo devi installare sul server e fare in modo che parta in automatico all'avvio del server.
+
+La guida per l'installare e il setting del DUC noip2 e' qui
+http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client-on-ubuntu/
+
+Se non vuoi metterlo tra i programmi che vengono lanciati automaticamente al boot del server, ogni volta che lo riaccendi devi farlo partire a mano, con
+
+`sudo /usr/local/bin/noip2`
+
+In questo modo stai dicendo: "caro software noip2, se per caso il mio IP cambia, dillo a no-ip.org in modo che giuseppe.ddns.net punti sempre al'IP del mio router ATTUALE"
