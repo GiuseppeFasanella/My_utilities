@@ -8,7 +8,7 @@
 
 **Di default ssh usa la porta 22**, cosi' come http usa di default la porta 80 ecc..
 
-Per rendere piu' difficile un attacco informatico cambia la porta associata a ssh. Ci sono, in particolare, 65535 porte disponibili, di cui le prime 1024 sono riservate per protocolli specifici (tipo appunto la 22 e' per ssh)
+Per rendere piu' difficile un attacco informatico cambia la porta associata a ssh. Ci sono, in particolare, 65535 porte disponibili, di cui le prime 1024 sono riservate per protocolli specifici (tipo appunto la 22 e' per ssh, la porta 80 e' per http)
 
 **Cambiare la porta associata a ssh**
 
@@ -30,6 +30,13 @@ e prova a connetterti tramite un dispositivo interno alla rete all'interno della
 
 Se tutto funziona, ti chiedera' la passwd e avrai accesso al server
 
+**Extra (io non ho avuto bisogno di farlo)**
+Potresti dever aprire la porta scelta per ssh nel tuo firewall e potrebbe anche essere comodo installare firestarter.
+
+`sudo apt-get install firestarter`
+
+Policy tab->Inbound Traffic Policy->Allow Service|Port|For ->Add Rule->Metti porta e ssh come nome->Everyone->Add
+
 ### Parte 1.1: Prima di rendere disponibile il server alla rete internet, cura un po' la sicurezza
 Modifica ssh_config aggiungendo quale cavillo in piu'
 
@@ -49,12 +56,10 @@ Per rendere operativa le modifiche apportate, **killa e fai ripartire sshd**:
 **Passo 2.1**: Devi essere sicuro che **il server acquisisca sempre lo stesso inet address** nella rete domestica (quello che ricavi da `ifconfig` per capirci), altrimenti ogni volta che connetterai il server sulla rete domestica,
 questo prendera' un inet diverso (cosi' funziona il protocollo DHCP).
 
-L'esatta procedura e' router-specific 
+L'esatta procedura e' router-specific, ma l'idea e' sempre quella
 
+* Accedi ai settings del tuo router inserendo `192.168.0.1` nella barra degli indirizzi del browser
+* Nel mio caso, sotto *Mode expert* ho trovato *Assigner une IP fixe a' une adresse MAC*. Dove qui, tanto per aumentare la confusione, per IP intende IP della rete interna, diverso per ogni device connesso al router. Tutti i dispositivi pero' escono sulla rete internet globale con un solo IP che e' quello del router.
+* Per scoprire qual e' il MAC address del server, al solito uso `ifconfig` e cerca `HWAdr`: troverai una cosa tipo `00:13:ef:70:02...`
+* A questo punto devi aggiungere la regola "Questo MAC address 00:13:ef:.... deve sempre prendersi questo inet 192.168.0.4 (ad esempio)"
 
-
-
-
-
-Accedi al tuo router con
-192.168.0.1
