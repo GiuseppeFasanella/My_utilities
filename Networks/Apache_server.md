@@ -27,12 +27,15 @@ mostra `80 LISTEN` 80 sarebbe la porta associata al protocollo http
 sudo /etc/init.d/apache2 stop (oppure start)
 
 **Passo 3: Port-forward della porta 80**
-Accedi ai settings del router e forwarda la porta 80 all'inet address corrispondente al device server
+
+Accedi ai settings del router con `192.168.0.1` e forwarda la porta 80 all'inet address corrispondente al device server
 
 A questo punto nel browser scriverai l'IP esterno associato al tuo modem. Siccome usi il browser usi il protocollo
 http, quindi la porta 80 che e' forwardata all'inet interno associato al server. 
 Risultato finisci sulla homepage `index.html` del tuo server
 
+Con l'account **no-ip** del quale mi sono munito, invece che scrivere l'IP scrivo direttamente
+`usersif.ddns.net` come url nel browser e ho fatto
 
 
 
