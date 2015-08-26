@@ -48,21 +48,21 @@ AuthName "My Website"
 
 Require valid-user`
 
-.htpasswd NON va creato con emacs ma con questa procedura: messo fuori da /var/www/ (per sicurezza) e deve essere di questo tipo
+* Crea .htpasswd cosi' (non con emacs) e fallo fuori da /var/www/ (per sicurezza)
 
-# '-c' stands for 'create'.  Only to be used when creating a new .htpasswd file.
-# You will be prompted for the password you would like to use after entering the command below.
+`htpasswd -c /usr/uj/jurbanek/.htpasswd john`
 
-htpasswd -c /usr/uj/jurbanek/.htpasswd john
+* '-c' stands for 'create'.  Only to be used when creating a new .htpasswd file.
+* You will be prompted for the password you would like to use after entering the command below.
 
-Add existing one
+Add a user in an existing .htpasswd
 
-# Notice there is no '-c' since the file exists already, we just want to add 'dave'
-# You will be prompted for the password you would like to use after entering the command below.
+`htpasswd /usr/uj/jurbanek/.htpasswd dave`
 
-htpasswd /usr/uj/jurbanek/.htpasswd dave
+* Notice there is no '-c' since the file exists already, we just want to add 'dave'
+* You will be prompted for the password you would like to use after entering the command below.
 
-Esempi verosimili saranno
+Nel file .htpasswd ti devi trovare qualcosa del genere
 
 john:n5MfEoHOIQkKg
 dave:9fluR/1n73p4c
