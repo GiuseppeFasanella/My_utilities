@@ -100,4 +100,8 @@ Per far partire un comando al boot, ti basta aggiungerlo in qeusto file (present
 
 Solo devi essere sicuro che non chieda interazione da tastiera (tipo yes o simili) altrimenti arrestera' il boot perche' si aspetta "yes" come input dall'utente
 
+quindi conviene cambiare i permessi su noip2
+
+chown -R user:user directory/ (magari sudo non serve nemmeno...chi lo sa)
+
 
