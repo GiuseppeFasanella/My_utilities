@@ -40,9 +40,12 @@ Con l'account **no-ip** del quale mi sono munito, invece che scrivere l'IP scriv
 **Passo 4: proteggere il proprio server**
 Inserisci il file .htaccess in /var/www (semplicemente con emacs)
 
-`AuthUserFile /path/to/.htpasswd
+AuthUserFile /path/to/.htpasswd
+
 AuthType Basic
+
 AuthName "My Website"
+
 Require valid-user`
 
 .htpasswd NON va creato con emacs ma con questa procedura: messo fuori da /var/www/ (per sicurezza) e deve essere di questo tipo
