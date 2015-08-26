@@ -72,12 +72,23 @@ dave:9fluR/1n73p4c
 * A questo punto, l'ultimo tocco e' modificare questo file
 * sudo emacs /etc/apache2/sites-enabled/000-default
 
+		AllowOverride All
 
-In alternativa, overwrite None e poi ci mettevi il contenuto di .htaccess
+In alternativa, Puoi lasciare Override None e poi ci mettere il contenuto di .htaccess direttamente in 000-default, eliminando cosi' del tutto il file .htaccess (ti servira' comunque il .htpasswd)
 
-DOS (Denial of Services) Attack
+		AllowOverride None
+		Order allow,deny
+		allow from all
+		AuthUserFile /home/gfasanel/.htpasswd
+		AuthType Basic
+		AuthName "My Website"
+		Require valid-user
+		
 
-fail2ban (ma mo non esageriamo)
+E' un buon sistema di protezione: resti scoperto solo al DOS (Denial of Services) Attack, cioe' sostanzialmente ti 
+arrivano migliaia di richieste di accesso al tuo server e il server va busy e si spegne. A quel punto dovresti individuare l'IP o i diversi IP che ti mandano migliaia di richeste e bannarli.
+
+La contromisura standard si chiama fail2ban (ma mo non esageriamo, chissenefrega se il raspberry si spegne)
 
 
 
