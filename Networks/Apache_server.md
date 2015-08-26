@@ -69,4 +69,16 @@ john:n5MfEoHOIQkKg
 
 dave:9fluR/1n73p4c
 
+* A questo punto, l'ultimo tocco e' modificare questo file
+* sudo emacs /etc/apache2/sites-enabled/000-default
+
+
+In alternativa, overwrite None e poi ci mettevi il contenuto di .htaccess
+
+DOS (Denial of Services) Attack
+
+fail2ban (ma mo non esageriamo)
+
+
+
 
