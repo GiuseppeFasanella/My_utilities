@@ -38,7 +38,8 @@ Con l'account **no-ip** del quale mi sono munito, invece che scrivere l'IP scriv
 `usersif.ddns.net` come url nel browser e ho fatto
 
 **Passo 4: proteggere il proprio server**
-Inserisci il file .htaccess in /var/www (semplicemente con emacs)
+
+Inserisci il file .htaccess in /var/www (semplicemente creandolo con emacs)
 
 AuthUserFile /path/to/.htpasswd
 
@@ -48,16 +49,16 @@ AuthName "My Website"
 
 Require valid-user`
 
-* Crea .htpasswd cosi' (non con emacs) e fallo fuori da /var/www/ (per sicurezza)
+* Crea .htpasswd cosi' (NON con emacs) e piazzalo fuori da /var/www/ (per sicurezza)
 
-`htpasswd -c /usr/uj/jurbanek/.htpasswd john`
+`htpasswd -c /path/to/.htpasswd john`
 
 * '-c' stands for 'create'.  Only to be used when creating a new .htpasswd file.
 * You will be prompted for the password you would like to use after entering the command below.
 
 Add a user in an existing .htpasswd
 
-`htpasswd /usr/uj/jurbanek/.htpasswd dave`
+`htpasswd /path/to/.htpasswd dave`
 
 * Notice there is no '-c' since the file exists already, we just want to add 'dave'
 * You will be prompted for the password you would like to use after entering the command below.
@@ -65,6 +66,7 @@ Add a user in an existing .htpasswd
 Nel file .htpasswd ti devi trovare qualcosa del genere
 
 john:n5MfEoHOIQkKg
+
 dave:9fluR/1n73p4c
 
 
