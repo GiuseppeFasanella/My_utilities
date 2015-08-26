@@ -93,3 +93,11 @@ Se non vuoi metterlo tra i programmi che vengono lanciati automaticamente al boo
 `sudo /usr/local/bin/noip2`
 
 In questo modo stai dicendo: "caro software noip2, se per caso il mio IP cambia, dillo a no-ip.org in modo che giuseppe.ddns.net punti sempre al'IP del mio router ATTUALE"
+
+Per far partire un comando al boot, ti basta aggiungerlo in qeusto file (presente di default su ogni macchina Linux)
+
+`/etc/rc.local`
+
+Solo devi essere sicuro che non chieda interazione da tastiera (tipo yes o simili) altrimenti arrestera' il boot perche' si aspetta "yes" come input dall'utente
+
+
