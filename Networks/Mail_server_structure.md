@@ -9,7 +9,7 @@ A volta 1) e 2) sono uno stesso server fisico, ma concettualmente sono due cose 
 3) Il server di approdo (tipicamente IMAP o POP), che riceve la mail che hai spedito
 
 
-![alt tag](https://raw.githubusercontent.com/GiuseppeFasanella/DataBase_utilities/master/img/sanita.png)
+![alt tag](https://github.com/GiuseppeFasanella/My_utilities/blob/master/Networks/img/mail_structure.png)
 
 
 Spedire una mail da riga di comando non e' tanto semplice quindi, perche' devi configurare il tutto in modo o da essere 
