@@ -9,7 +9,7 @@ quale ti stai connettendo.
 
 Ho scelto di aprire il tunnel dalla porta 15000
 
-![alt tag]
+![alt tag] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/Networks/img/tunnel.png)
 
 2) Per controllare se la porta e' in ascolto:
 
