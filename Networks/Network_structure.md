@@ -1,5 +1,5 @@
 
-[!alt tag] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/Networks/img/network_structure.png)
+![alt tag] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/Networks/img/network_structure.png)
 
 Procedendo da sinistra verso destra, ci sei tu da qualche parte del mondo (es. bruxelles) connesso alla rete INTERNET.
 In Italia c'e' casa tua, con il tuo modem connesso anche lui alla rete internet. Al di sotto (gerarchicamente) del 
