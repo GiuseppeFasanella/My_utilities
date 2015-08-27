@@ -46,4 +46,5 @@ Nella pratica devi fare una mappa del tipo:
 
 * usersif.ddns.net VUOL DIRE 193....... e quando l'IP cambia usersif.ddns.net punta all'IP aggiornato
 
+![alt tag] (https://github.com/GiuseppeFasanella/My_utilities/blob/master/Networks/img/noip_concept.png)
 
