@@ -1,7 +1,7 @@
 0) Un tunnel si fa quando per motivi tuoi vuoi essere visto dalla rete internet con un certo IP che non e' quello dal
 quale ti stai connettendo.
 
-0a) Se hai "accesso ssh" a un certo server, puoi fare un tunnel a quel server e quindi "acquisire" il suo IP 
+0a) Se hai "accesso ssh" a un certo server, puoi fare un tunnel a quel server e quindi "acquisire" il suo IP. Tecnicamente si chiama **socket proxy** 
 
 1) Aprire il tunnel: 
 
