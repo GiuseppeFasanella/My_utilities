@@ -19,3 +19,7 @@ coltelleria.mp4 rimarra' inalterato e OUTFILE.mp4 sara' solo i primi 5 minuti de
 ffmpeg -acodec copy -vcodec copy -ss 00:00:14.99 -t 00:30:00 -i 1.mp3 1_new.mp3
 
 Qui ho tagliato l'orribile musichetta iniziale del "Terzo Anello" che introduce i libri letti "Ad alta voce"
+
+**E anche con gli mkv**
+
+ffmpeg -ss 15 -t 30 -i input.mkv -acodec copy -vcodec copy output.mkv
