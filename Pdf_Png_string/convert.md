@@ -1,3 +1,6 @@
+convert *.png output.pdf # Crea un unico pdf: ogni png occupera' una singola pagina del pdf 
+
+# Puoi anche assemblare un'unica pagina con diverse immagini
 convert *.jpg -append output.jpg 
 
 +append li appende in orizzontale 
