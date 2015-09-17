@@ -104,4 +104,6 @@ quindi conviene cambiare i permessi su noip2
 
 chown -R user:user directory/ (magari sudo non serve nemmeno...chi lo sa)
 
+A questo punto se fai nslookup a distanza di tempo vedrai che l'IP in se' e' cambiato, ma no-ip  ha tenuto traccia del cambiamento
 
+https://github.com/GiuseppeFasanella/Raspberry_pi/blob/master/img/nslookup.png
