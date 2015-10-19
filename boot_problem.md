@@ -33,4 +33,12 @@ Adesso carichiamo i moduli
 * `initrd /initrd.img`
 * `boot`
 
+Nei casi piu' gravi non si riesce a risolvere nemmeno cosi' e allora fai la seguente cosa
 
+* reboot da pennetta con un sistema Linux qualsiasi
+* Digli di volerlo provare, non installare
+* A quel punto apri un terminale e installa Boot-repair (basta che scrivi su google e avrai le istruzioni)
+* Lancia Boot-Repair e fagli risolvere il problema dell'avvio a lui
+* Spegni il PC
+* Togli la pennetta 
+* Riavvia normalmente
