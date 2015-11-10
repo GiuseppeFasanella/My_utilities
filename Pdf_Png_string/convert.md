@@ -11,8 +11,9 @@ Da pdf a png
 
 convert -density 150 accordo_diminuito-crop.pdf -quality 90 -background white -flatten output.png
 
-for f in *.pdf; do f=$(echo $f| sed 's/.pdf//');convert -density 150 $f.pdf -quality 90 -background white -flatten $f.png; done
-
+```
+for f in *.pdf; do f=$(echo $f| sed 's/.pdf//');convert -density 150 $f.pdf -quality 90 -background white -flatten  -trim $f.png; done
+```
 Aggiungere spazio bianco a png
 
 convert output.png -background white -flatten output2.png
