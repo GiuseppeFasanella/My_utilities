@@ -7,8 +7,7 @@ convert *.jpg -append output.jpg
 # +append li appende in orizzontale 
 # -background #ffffff (background bianco)
 ```
-
-Da pdf a png
+* Da pdf a png
 
 ```
 convert -density 150 accordo_diminuito-crop.pdf -quality 90 -background white -flatten -trim output.png
