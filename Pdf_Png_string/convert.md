@@ -20,5 +20,5 @@ for f in *.pdf; do f=$(echo $f| sed 's/.pdf//');convert -density 150 $f.pdf -qua
 
 * Se il pdf ha piu' pagine e tu vuoi convertirle tutte
 ```
-convert -quality 100 -density 300x300 multipage.pdf single%d.png
+convert -quality 100 -density 300x300 multipage.pdf single%d.png -trim
 ```
