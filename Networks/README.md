@@ -58,7 +58,16 @@ questo prendera' un inet diverso (cosi' funziona il protocollo DHCP).
 
 L'esatta procedura e' router-specific, ma l'idea e' sempre quella
 
-* Accedi ai settings del tuo router inserendo `192.168.0.1` nella barra degli indirizzi del browser
+* Accedi ai settings del tuo router inserendo `192.168.0.1` nella barra degli indirizzi del browser (di solito e' quello l'indirizzo del router). Se non dovesse funzionare, allora:
+```
+gfasanel@Amerigo:~$ netstat -nr
+Tabella di routing IP del kernel
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.X.Y   0.0.0.0         UG        0 0          0 wlan0
+```
+
+E scopri che il tuo router ha indirizzo 192.168.X.Y
+
 * Nel mio caso, sotto *Mode expert* ho trovato **Assigner une IP fixe a' une adresse MAC**. Dove qui, tanto per aumentare la confusione, per IP intende IP della rete interna, diverso per ogni device connesso al router. Tutti i dispositivi pero' escono sulla rete internet globale con un solo IP che e' quello del router.
 * Per scoprire qual e' il MAC address del server, al solito uso `ifconfig` e cerca `HWAdr`: troverai una cosa tipo `00:13:ef:70:02...`
 * A questo punto devi aggiungere la regola "Questo MAC address 00:13:ef:.... deve sempre prendersi questo inet 192.168.0.4 (ad esempio)"
