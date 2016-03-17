@@ -17,6 +17,8 @@ Per rendere piu' difficile un attacco informatico cambia la porta associata a ss
 
 Per rendere operativa la modifica della porta, **killa e fai ripartire sshd**:
 
+* sudo /etc/init.d/ssh restart
+* O se non dovesse funzionare, ci vai giu' pesante con:
 * sudo killall sshd
 * sudo /etc/init.d/ssh start
 
