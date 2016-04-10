@@ -1,0 +1,1 @@
+ffmpeg -i /PATH/TO/INPUT.mp4 /PATH/TO/OUTPUT.mp3
