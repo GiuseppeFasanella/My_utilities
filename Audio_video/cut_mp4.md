@@ -1,3 +1,5 @@
+##sudo apt-get install ffmpeg ubuntu-restricted-extras
+
 ffmpeg -acodec copy -vcodec copy -ss START -t LENGTH -i ORIGINALFILE.mp4 OUTFILE.mp4
 
 ffmpeg -acodec copy -vcodec copy -ss 0 -t 00:15:00 -i ORIGINALFILE.mp4 OUTFILE-1.mp4
