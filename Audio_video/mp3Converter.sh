@@ -5,3 +5,4 @@ for f in *.wav;do lame -V 1 $f ${f%.wav}.mp3; done
 rm *.wav
 cd ..
 #Nell'ordine: sostituisce gli spazi bianchi con _; converte in mp3; rimuove i .wav
+#NON FUNZIONA CON i .ram e gli inutili .wma (windows media audio)
