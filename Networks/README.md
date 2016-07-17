@@ -45,8 +45,8 @@ Modifica ssh_config aggiungendo quale cavillo in piu'
 * sudo emacs /etc/ssh/sshd_config
 
 * Protocol 2 #usera' il protocollo ssh2 (piu' sicuro)
-* PermitRootLogin no # non potrai loggarti come root 
-* AllowUsers pi # puoi fare ssh solo verso l'utente pi del server
+* PermitRootLogin no # non potrai loggarti come root --> Io pero' VOGLIO avere accesso tramite root
+* AllowUsers pi # puoi fare ssh solo verso l'utente pi del server --> Io pero' voglio accedere anche all'utente root
 
 Per rendere operativa le modifiche apportate, **killa e fai ripartire sshd**:
 
