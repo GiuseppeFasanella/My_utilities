@@ -99,7 +99,15 @@ L'ultimo problema e' questo: l'ip del router, quello che prima ho chiamato `exte
 La guida per l'installare e il setting del DUC noip2 e' qui
 http://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client-on-ubuntu/
 
-Se non vuoi metterlo tra i programmi che vengono lanciati automaticamente al boot del server, ogni volta che lo riaccendi devi farlo partire a mano, con
+Metto il link perche' non si sa mai, magari in futuro cambiano qualcosa, cmq al momento, bisogna fare questo:
+```
+#come utente root
+cd /usr/local/src/
+wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+tar xf noip-duc-linux.tar.gz
+cd noip-2.1.9-1/
+make install
+```
 
 `sudo /usr/local/bin/noip2`
 
@@ -109,11 +117,7 @@ Per far partire un comando al boot, ti basta aggiungerlo in qeusto file (present
 
 `/etc/rc.local`
 
-Solo devi essere sicuro che non chieda interazione da tastiera (tipo yes o simili) altrimenti arrestera' il boot perche' si aspetta "yes" come input dall'utente
-
-quindi conviene cambiare i permessi su noip2
-
-chown -R user:user directory/ (magari sudo non serve nemmeno...chi lo sa)
+In generale devi essere sicuro che non chieda interazione da tastiera (tipo yes o simili) altrimenti arrestera' il boot perche' si aspetta "yes" come input dall'utente
 
 A questo punto se fai `nslookup usersif.ddns.net` a distanza di tempo vedrai che l'IP in se' e' cambiato, ma no-ip  ha tenuto traccia del cambiamento
 
