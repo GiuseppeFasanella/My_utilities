@@ -49,18 +49,18 @@ AuthName "My Website"
 
 Require valid-user`
 
-* Crea .htpasswd cosi' (NON con emacs) e piazzalo fuori da /var/www/ (per sicurezza)
+* **Crea** .htpasswd cosi' (NON con emacs) e piazzalo **fuori da /var/www/** (per sicurezza)
 
 `htpasswd -c /path/to/.htpasswd john`
 
 * '-c' stands for 'create'.  Only to be used when creating a new .htpasswd file.
 * You will be prompted for the password you would like to use after entering the command below.
 
-Add a user in an existing .htpasswd
+**Add a user** in an existing .htpasswd
 
 `htpasswd /path/to/.htpasswd dave`
 
-* Notice there is no '-c' since the file exists already, we just want to add 'dave'
+* Notice there is **no '-c' since the file exists already**, we just want to add 'dave'
 * You will be prompted for the password you would like to use after entering the command below.
 
 Nel file .htpasswd ti devi trovare qualcosa del genere
@@ -69,7 +69,7 @@ john:n5MfEoHOIQkKg
 
 dave:9fluR/1n73p4c
 
-* A questo punto, l'ultimo tocco e' modificare questo file
+* A questo punto, l'**ultimo tocco** e' modificare questo file
 * sudo emacs /etc/apache2/sites-enabled/000-default
 
 		AllowOverride All
