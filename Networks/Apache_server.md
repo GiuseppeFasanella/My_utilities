@@ -8,7 +8,7 @@ sudo apt-get install apache2
 
 **Passo 2: Check if it works**
 
-Apri il browser e scrivi `localhost` oppure `127.0.0.1` oppure l'inet address che ricavi da `ifconfig`: in tutti e
+Direttamente dal raspberry, apri il browser e scrivi `localhost` oppure `127.0.0.1` oppure l'inet address che ricavi da `ifconfig`: in tutti e
 3 i casi sul browser ti deve apparire `it works`
 
 Lui di fatto mostra a schermo il file index.html come pagina iniziale del tuo server appena creato. 
