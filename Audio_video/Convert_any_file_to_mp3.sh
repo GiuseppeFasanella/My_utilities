@@ -4,5 +4,6 @@ for f in *.ram; do
   #A questo punto, essendo passati da ram a wav, puoi passare da was a mp3
   lame -V 1 ${f%.ram}.wav ${f%.ram}.mp3
   rm $f
+  rm ${f%.ram}.wav
 done
 
