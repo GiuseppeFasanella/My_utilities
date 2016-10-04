@@ -1,7 +1,4 @@
-```
 sudo apt-get install libreoffice
 libreoffice my.pdf
 #Just open the pdf, edit, and export as pdf
-```
-
-Funziona benissimo
+#Funziona benissimo: sono piacevolmente stupito
