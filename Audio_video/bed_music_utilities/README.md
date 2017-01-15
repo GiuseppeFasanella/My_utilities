@@ -10,10 +10,10 @@ Nota: shut_down.sh fa 'sudo shutdown -h now'. Quindi, per fare in modo che l'ute
 
 abbia i permessi di root per chiamare `shutdown -h now` devi fare cosi'
 
-'''
+``` 
 sudo visudo
 #e aggiungere una riga finale
 gfasanel ALL = NOPASSWD: /sbin/shutdown
-'''
+```
 
 Buon divertimento!
