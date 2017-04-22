@@ -4,7 +4,7 @@ ffmpeg -acodec copy -vcodec copy -ss START -t LENGTH -i ORIGINALFILE.mp4 OUTFILE
 
 ffmpeg -acodec copy -vcodec copy -ss 0 -t 00:15:00 -i ORIGINALFILE.mp4 OUTFILE-1.mp4
 
-**Io l'ho usato cosi'**
+**Sostanzialmente puoi specificare la durata**
 
 Voglio dividere il file coltelleria.mp4 e prendermi i primi 5 minuti
 
@@ -12,7 +12,7 @@ ffmpeg -acodec copy -vcodec copy -ss 0 -t 00:05:00 -i coltelleria.mp4 OUTFILE.mp
 
 coltelleria.mp4 rimarra' inalterato e OUTFILE.mp4 sara' solo i primi 5 minuti del file coltelleria.mp4
 
-**O anche cosi'**
+**Oppure puoi dire taglia da qui a qui**
 
 ffmpeg -i scores_quartetto_n14.mp4 -ss 32:31 -to 38:51 -c copy 7.mp4
 
