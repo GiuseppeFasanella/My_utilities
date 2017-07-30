@@ -9,3 +9,8 @@ for f in *.mp3; do
     ffmpeg -i $f -ss 00:21 -to $reduced_length -c copy ${f%.mp3}_reduced.mp3 
 
 done
+
+#Quando sei sicuro che hai tagliato bene i tuoi file, rinominali togliendo il _reduced.mp3 alla fine
+#for f in *.mp3; do
+#    mv $f ${f%_reduced.mp3}.mp3
+#done
