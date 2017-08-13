@@ -12,6 +12,10 @@ convert *.jpg -append output.jpg
 ```
 convert -density 150 accordo_diminuito-crop.pdf -quality 90 -background white -flatten -trim output.png
 #trim serve per tagliare lo spazio bianco intorno
+#Ora trim e' abbastanza aggressivo e taglia tutto (proporio tutto) lo spazio bianco attorno.
+#cosi' metti una piccola cornice bianca di 10x100 pixel attorno alla tua figura
+convert $f.png -bordercolor White -border 10x100 $f.png
+
 ```
 
 ```
