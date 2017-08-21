@@ -1,2 +1,3 @@
-vim model_national3pct.py -c ":hardcopy > model3.ps" -c ":q"
-ps2pdf model3.ps web_plots/model3.pdf
+$code=model_national3pct
+vim ${code}.py -c ":hardcopy > ${code}.ps" -c ":q"
+ps2pdf ${code}.ps web_plots/${code}.pdf
