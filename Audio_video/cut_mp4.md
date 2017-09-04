@@ -1,8 +1,10 @@
 ##sudo apt-get install ffmpeg ubuntu-restricted-extras
 
-ffmpeg -acodec copy -vcodec copy -ss START -t LENGTH -i ORIGINALFILE.mp4 OUTFILE.mp4
+ffmpeg -i input_file -c copy -ss 10:45 -to 30:25 output_file
 
-ffmpeg -acodec copy -vcodec copy -ss 0 -t 00:15:00 -i ORIGINALFILE.mp4 OUTFILE-1.mp4
+ffmpeg -c copy -ss START -t LENGTH -i ORIGINALFILE.mp4 OUTFILE.mp4 #-acodec copy -vcodec copy
+
+ffmpeg -c copy -ss 0 -t 00:15:00 -i ORIGINALFILE.mp4 OUTFILE-1.mp4 #-acodec copy -vcodec copy
 
 **Sostanzialmente puoi specificare la durata**
 
