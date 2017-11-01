@@ -1,8 +1,11 @@
 00:00:58,000 --> 00:01:08,00
-O Mensch!
+<i>O Mensch!</i>
+O uomo!
 
 00:01:12,000 --> 00:01:20,00
-O Mensch!
+<i>O Mensch!</i>
+O uomo!
 
 00:01:25,000 --> 00:01:35,00
-Gibt Acht! Gibt Acht!
+<i>Gibt Acht! Gibt Acht!</i>
+Sta' attento! Sta' attento!
