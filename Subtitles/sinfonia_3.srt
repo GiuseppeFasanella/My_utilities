@@ -1,11 +1,22 @@
+#########Commenti########
+Trick da usare quando si ha a che fare con lettori cretini
+#1 I numeri all'inizio di ogni sottotitolo sono necessari in caso di lettore cretino (VLC ad esempio non ne ha bisogno)
+#2 Attento agli spazi tra un sottotitolo e il successivo: se ce sono 2 un lettore cretino si blocca
+#3 Il cretinissimo lettore dell'app RManager pensa che 'No' (o anche 'NO') significhi 'new line' --> l'unica soluzione che 
+trovato e' di sostituire tutti i NO/No con 'no'
+#########################
+
+1
 00:00:58,000 --> 00:01:08,00
 <i>O Mensch!</i>
 O uomo!
 
+2
 00:01:12,000 --> 00:01:20,00
 <i>O Mensch!</i>
 O uomo!
 
+3
 00:01:25,000 --> 00:01:35,00
 <i>Gibt Acht! Gibt Acht!</i>
 Sta' attento! Sta' attento!
