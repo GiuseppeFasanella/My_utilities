@@ -1,4 +1,5 @@
 sudo apt-get remove skype
 sudo apt-get purge skype
-The Above Command will remove the  existing Skype completely And than you have to manually check .Skype in the Home directory,  If it exist remove it.
+The Above Command will remove the  existing Skype completely 
+And than you have to manually check .Skype in the Home directory,  If it exist remove it.
 Than run the sudo apt-get update.  It will refresh the existing packs and which will be ready to work. 
