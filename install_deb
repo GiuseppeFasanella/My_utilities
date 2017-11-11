@@ -1,0 +1,3 @@
+sudo dpkg -i linux.deb
+And one more command too
+sudo apt-get -f install
