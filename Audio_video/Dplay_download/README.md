@@ -1,4 +1,5 @@
 http://danielegiudice.altervista.org/scaricare-i-video-di-dplay-it/
+
 Dplay non permette di scaricare
 Per ovviare a questa mancanza, 
 ho creato uno script che, una volta installato, 
