@@ -12,3 +12,4 @@ L'idea e' questa:
 2. Poi serve lo script che riesca a 'capire' qual e' l'url del video che vorresti scaricare
 
 Lo script sorgente e' qui:
+https://github.com/GiuseppeFasanella/My_utilities/blob/master/Audio_video/Dplay_download/flusso_di_rete_script
