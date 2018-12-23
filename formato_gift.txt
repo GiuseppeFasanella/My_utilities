@@ -1,0 +1,5 @@
+Domanda 1:{=risposta giusta
+~risposta errata}
+
+Domanda 2:{=risposta giusta
+~risposta errata}
