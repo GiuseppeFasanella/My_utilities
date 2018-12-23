@@ -1,0 +1,15 @@
+si fa cosi'
+parti dalla pagina che vuoi prendere
+https://www.raiplayradio.it/playlist/2017/12/Rai-Radio-Playlist-Item-41e4ba25-bd47-44d7-9ce5-fa9b0fd7367e.html
+L'educazione Sentimentale - Ad Alta Voce - Rai Radio 3 - RaiPlay Radio
+
+poi devi aprirlo in versione sviluppatore web
+io faccio strumenti -> strumenti per sviluppatori
+e ti viene proprio tutto il codice tutto
+vai su Elements
+e cerca mp3
+<audio width="100%" height="100%" style="width: 1585px; height: 0px;" autoplay="autoplay" id="player1" src="https://creativemedia3-rai-it.akamaized.net/radiocdn/radio_ondemand/radio3_od/5114470.mp3?auth=daEardtaWcad0cAclaTd5cdcbbVbpboaYdO-bCfICj-c0-HmAuzGn&amp;aifp=V001"></audio>
+L'educazione sentimentale - 1 p.ta  4.7 MB
+il path e' quel src
+tutto questo andrebbe automatizzato
+perche' a mano...
