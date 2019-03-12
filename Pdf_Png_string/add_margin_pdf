@@ -1,3 +1,4 @@
+## pdfjam scala all'80%, poi viene aggiunto un offset di 0.5 cm per le pagine pari e 0.5 per le dispari
 pdfjam --scale '0.8' --twoside --offset '0.5cm 0.5cm' input.pdf
 
 Scala il pdf e aggiungi un margine
