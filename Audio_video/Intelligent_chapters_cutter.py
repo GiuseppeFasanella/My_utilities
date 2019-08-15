@@ -10,6 +10,8 @@ L'idea qui e' semplice:
 1. Ridurre il numero di sample per secondo in modo da lavorare con array "piccoli": O(60k). 
 Per fare questo prima prendo tutto il sample e poi re-samplo io 4 volte al secondo
 In questo modo un tipico audiolibro di 7 ore --> data  = array di 100k numeri.
+Se non facessi questo resample io a mano gli array sarebbero cosi' grandi da distruggere sostanzialmente la
+funzionalita' della macchina. In fondo per capire se e' un silenzio o no, 4 samples a secondo mi bastano e avanzano :)
 
 2. Trova le posizioni in data dove ci sono vari zeri di fila, preceduti e seguiti da 1 (ossia i silenzi tra un capitolo 
 e l'altro)
