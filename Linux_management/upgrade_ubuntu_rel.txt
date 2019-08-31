@@ -1,0 +1,54 @@
+sudo apt update
+sudo apt upgrade
+
+This makes sure your Ubuntu is up to date. Next, follow this up with:
+
+$ sudo apt dist-upgrade
+
+This handles changing software dependencies with new versions of packages.
+
+I then follow this up with:
+
+$ sudo apt-get autoremove
+
+This removes dependencies from uninstalled applications. You can do the same thing from the GUI desktop with the utility application Bleachbit. After that, it's time to get things ready for the big upgrade with:
+
+$ sudo apt install update-manager-core
+
+Finally:
+
+$ sudo do-release-upgrade
+
+This will start upgrading your system to 18.04. Along the way, Ubuntu will ask you things
+
+### Comandi in breve
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt-get autoremove
+sudo apt install update-manager-core
+sudo do-release-upgrade
+
+Force direct upgrade by using the -d switch. In this case sudo do-release-upgrade -d will force upgrade from Ubuntu 16.04 LTS to Ubuntu 18.04 LTS
+
+
+To upgrade on a desktop system:
+
+Open the "Software & Updates" Setting in System Settings.
+
+Select the 3rd Tab called "Updates".
+Set the "Notify me of a new Ubuntu version" dropdown menu to "For any new version" if you are using 15.10, set it to "long-term support versions" if you are using 14.04 LTS.
+Press Alt+F2 and type in "update-manager" (without the quotes) into the command box.
+Software Updater should open up and tell you: New distribution release '16.04 LTS' is available.
+Click Upgrade and follow the on-screen instructions.
+To upgrade on a server system:
+
+Install the update-manager-core package if it is not already installed.
+
+Make sure the /etc/update-manager/release-upgrades is set to normal if you are using 15.10, lts if you are using 14.04 LTS.
+Launch the upgrade tool with the command sudo do-release-upgrade.
+
+Follow the on-screen instructions.
+Note that the server upgrade will use GNU screen and automatically re-attach in case of dropped connection problems.
+
+There are no offline upgrade options for Ubuntu Desktop and Ubuntu Server. Please ensure you have network connectivity to one of the official mirrors or to a locally accessible mirror and follow the instructions above.
