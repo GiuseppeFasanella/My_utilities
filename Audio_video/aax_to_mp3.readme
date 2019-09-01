@@ -1,0 +1,7 @@
+https://en.code-bude.net/2017/02/12/how-to-convert-audible-aax-files-to-mp3-in-linux/
+
+e' stato importante installe selenium con pip2
+
+sudo -H pip2 install selenium
+
+altrimenti "no module named selenium"
