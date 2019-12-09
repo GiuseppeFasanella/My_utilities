@@ -8,3 +8,7 @@ e' stato importante installe selenium con pip2
 sudo -H pip2 install selenium
 
 altrimenti "no module named selenium" e usare python 2.7 (conda environment xxx)
+
+### Alla fine metti tutto insieme
+ffmpeg -i "concat:1.mp3|2.mp3" -acodec copy output.mp3
+
