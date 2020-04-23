@@ -1,5 +1,8 @@
 * Da png a pdf
 
+In caso di problemi con la policy
+<policy domain="coder" rights="read | write" pattern="PDF" />
+in /etc/ImageMagick-7/policy.xml
 ```
 convert *.png output.pdf # Crea un unico pdf: ogni png occupera' una singola pagina del pdf 
 # Puoi anche assemblare un'unica pagina con diverse immagini
